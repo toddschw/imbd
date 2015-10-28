@@ -2,7 +2,10 @@
 require 'httparty'
 
 class Siskel
-  attr_accessor :title, :year, :rating, :plot
+  attr_accessor :title,
+                :year,
+                :rating,
+                :plot
 
   def initialize(title, opts = {})
     @movie = HTTParty.get("http://www.omdbapi.com/?t=#{title}&y=#{opts[:year]}&plot=#{opts[:plot]}?tomatoes=true")
