@@ -5,7 +5,7 @@ get "/" do
   erb :index
 end
 
-get "/movie" do
-  movie = Siskel.new("Lion King")
-  "The title of our movie is #{movie.title}."
+get "/movie/:name" do
+  @movie = Siskel.new(params["name"])
+  erb :movie
 end
