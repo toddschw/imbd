@@ -6,6 +6,13 @@ get "/" do
 end
 
 get "/movie/:name" do
-  @movie = Siskel.new(params["name"])
+  @flick = Siskel.new(params["name"])
   erb :movie
+end
+
+get "/movie?" do
+   searched_movie = params['title']
+   @flick = Siskel.new(searched_movie)
+   erb :movie
+
 end

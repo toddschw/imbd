@@ -1,0 +1,15 @@
+body {
+  background-color: #252c38;
+  color: white;
+}
+
+input > text {
+  height: 20px;
+  width: 300px;
+  margin-left: 5px;
+}
+
+.label {
+  color: #fe5e27;
+  font-weight: bold;
+}
