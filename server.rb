@@ -1,5 +1,5 @@
 require "sinatra"
 
 get "/" do
-  "MovieFinder"
+  erb :index
 end
