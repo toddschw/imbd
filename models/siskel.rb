@@ -10,7 +10,10 @@ class Siskel
                 :poster,
                 :actors,
                 :released,
-                :rated
+                :rated,
+                :concensus,
+                :runtime
+                :awards
 
   def initialize(title, opts = {})
     @movie = HTTParty.get("http://www.omdbapi.com/?t=#{title}&y=#{opts[:year]}&plot=#{opts[:plot]}?tomatoes=true")
@@ -23,6 +26,16 @@ class Siskel
     @actors = @movie["Actors"]
     @released = @movie["Released"]
     @rated = @movie["Rated"]
+    @runtime = @movie["Runtime"]
+    @awards_won = @movie["Awards"]
+    end
+
+  def awards
+    if @awards_won != "N/A"
+      @awards_won
+    else
+      "No awards won"
+    end
   end
 
   def concensus

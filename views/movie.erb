@@ -6,7 +6,9 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
-    What movie do you want to see?
+    <p><img src="/images/imdbclone.png"><span id="clone">Clone</span></p>
+      <hr>
+    <div id="myform">What movie do you want to see?</div>
     <form action="/movie" method="get">
       <input name="title">
       <button>Search</button>
@@ -19,5 +21,8 @@
     <p><span class="label">Actors: </span> <%= @flick.actors %></p>
     <p><span class="label">Released: </span> <%= @flick.released %></p>
     <p><span class="label">Rated: </span> <strong><%= @flick.rated %></strong></p>
+    <p><span class="label">Runtime:</span><%= @flick.runtime %></p>
+    <p><span class="label">Awards:</span><%= @flick.awards %></p>
+
   </body>
 </html>

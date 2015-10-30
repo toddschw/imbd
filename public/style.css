@@ -3,10 +3,18 @@ body {
   color: white;
 }
 
-input > text {
+input {
   height: 20px;
   width: 300px;
-  margin-left: 5px;
+}
+
+#myform {
+  padding-bottom: 10px;
+}
+
+
+#clone {
+  font-size: 70px;
 }
 
 .label {
